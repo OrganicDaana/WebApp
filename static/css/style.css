@@ -1,0 +1,80 @@
+* {
+    margin: 0;        
+}
+
+:root {
+    --color-primary: #2ab92a;
+    --color-secondary: #2a2ab9;
+    --color-accent: #b92a6e;
+    --color-light: #f7f7f7;
+    --color-dark: #111111;
+    --color-muted: #ffffff;
+    --color-navbar: #58d858;
+
+    /* Fonts */
+    --font-heading: 'Rubik', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    background-color: var(--color-navbar);
+}
+
+.navbar .container-fluid {
+    margin: 0 40px;
+}
+
+.navbar .navbar-toggler {
+    border: 2px solid var(--color-primary);
+}
+
+.navbar .navbar-brand img{
+    border-radius: 50%;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar .navbar-nav .nav-item a {
+    font-size: 16px;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-item a:hover {
+    color: #515151;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+@media (max-width: 990px) {
+    .navbar {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .navbar .container-fluid {
+        margin: 0;
+    }
+    
+    .navbar .navbar-collapse {
+        background-color: honeydew;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+    
+    .navbar .navbar-nav .nav-item a:hover {
+        color: var(--color-primary);
+    }
+
+    .navbar .navbar-nav .nav-item a {
+        font-size: 16px;
+    }
+}
