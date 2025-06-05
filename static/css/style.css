@@ -1,43 +1,49 @@
-* {
-    margin: 0;        
-}
-
+/* Root variables */
 :root {
-    --color-primary: #2ab92a;
+    --color-theme: forestgreen;
+    --color-navbar: #58d858;
     --color-secondary: #2a2ab9;
     --color-accent: #b92a6e;
     --color-light: #f7f7f7;
     --color-dark: #111111;
     --color-muted: #ffffff;
-    --color-navbar: #58d858;
 
     /* Fonts */
     --font-heading: 'Rubik', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+    --font-body: 'Share Tech', sans-serif;
 }
 
-/* navbar */
-.navbar {
+/* === FIXED NAVBAR STYLING === */
+#mainNavbar {
     position: fixed;
-    background-color: var(--color-navbar);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* padding: 15px 0; */
 }
 
+/* When scrolled */
+#mainNavbar.scrolled {
+    background-color: var(--color-navbar);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* NAVBAR CONTENT */
 .navbar .container-fluid {
     margin: 0 40px;
 }
-
 .navbar .navbar-toggler {
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-dark);
 }
-
-.navbar .navbar-brand img{
+.navbar .navbar-brand img {
     border-radius: 50%;
 }
-
 .navbar .navbar-nav .nav-item {
     margin: 0 10px;
 }
-
 .navbar .navbar-nav .nav-item a {
     font-size: 16px;
     color: var(--color-dark);
@@ -45,36 +51,96 @@
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
 }
-
 .navbar .navbar-nav .nav-item a:hover {
-    color: #515151;
+    color: var(--color-accent);
 }
-
 .navbar .navbar-toggler:focus {
     box-shadow: none !important;
 }
 
+/* RESPONSIVE */
 @media (max-width: 990px) {
     .navbar {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-    
     .navbar .container-fluid {
         margin: 0;
     }
-    
     .navbar .navbar-collapse {
         background-color: honeydew;
         border-radius: 20px;
         margin-top: 10px;
     }
-    
     .navbar .navbar-nav .nav-item a:hover {
         color: var(--color-primary);
     }
+}
 
-    .navbar .navbar-nav .nav-item a {
-        font-size: 16px;
+/* === HERO SECTION === */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Make sure the image covers the entire hero section */
+.hero-section .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(60%);
+    z-index: 1;
+}
+
+/* Hero text centered over image */
+.hero-section .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    width: 90%;
+    max-width: 600px;
+}
+
+.hero-section .hero-text h1 strong {
+    display: inline-block;
+    padding: 5px 10px 18px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.hero-section .hero-text h1 strong {
+    color: #58d858;
+}
+
+.hero-section .hero-text h1 strong span {
+    color: var(--color-theme);
+}
+
+/* Responsive text scaling */
+@media (max-width: 768px) {
+    .hero-section .hero-text h1 strong {
+        padding: 5px 10px 10px 10px;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-section .hero-text p {
+        font-size: 1rem;
+    }
+    .hero-section .hero-text .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
     }
 }
