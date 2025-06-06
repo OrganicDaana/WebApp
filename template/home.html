@@ -1,0 +1,73 @@
+<!-- templates/home.html -->
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- hero section -->
+<section>
+    <div class="hero-section">
+        <img src="{% static 'images/main-image.jpg' %}" class="hero-image" alt="Hero Background">
+        <div class="hero-text">
+            <h1 class="display-4 fw-bold"><strong>Agri<span>Swift</span></strong></h1>
+            <p class="lead">Buy Direct. Pay Fast. Sell Global.</p>
+            <a href="#product" class="btn btn-success mt-3">Explore Products</a>
+        </div>
+    </div>
+
+    <div class="home-container">
+        <div class="card-container">
+            <div class="card border-success mb-3">
+                <div class="card-header bg-success text-light">Mission</div>
+                <div class="card-body text-success">
+                  <p class="card-text">
+                    <ul class="list-group list-group-flush" style="overflow: hidden;">
+                        <li class="list-group-item">Provide fast and secure transport for farm goods.</li>
+                        <li class="list-group-item">Make logistics affordable for every farmer.</li>
+                        <li class="list-group-item">Bridge the gap between farms and markets.</li>
+                    </ul>
+                  </p>
+                </div>
+            </div>
+            <div class="card border-warning mb-3">
+                <div class="card-header bg-warning text-dark">Our Promise</div>
+                <div class="card-body text-warning">
+                  <p class="card-text">
+                    <ul class="list-group list-group-flush" style="overflow: hidden;">
+                        <li class="list-group-item">Safe, on-time delivery every time.</li>
+                        <li class="list-group-item">Easy booking with clear, fair pricing.</li>
+                        <li class="list-group-item">24/7 support for all transport needs.</li>
+                    </ul>
+                  </p>
+                </div>
+            </div>
+            <div class="card border-info mb-3">
+                <div class="card-header bg-info text-dark">Vision</div>
+                <div class="card-body text-info">
+                  <p class="card-text">
+                    <ul class="list-group list-group-flush" style="overflow: hidden;">
+                        <li class="list-group-item">Become India’s leading agri-logistics platform.</li>
+                        <li class="list-group-item">Build a smart, connected supply chain for farming.</li>
+                        <li class="list-group-item">Empower rural communities through better access.</li>
+                    </ul>
+                  </p>
+                </div>
+            </div> 
+            <div class="card border-danger mb-3">
+                <div class="card-header bg-danger text-light">Core Values</div>
+                <div class="card-body text-danger">
+                  <p class="card-text">
+                    <ul class="list-group list-group-flush" style="overflow: hidden;">
+                        <li class="list-group-item"><strong>Trust: </strong>We keep our word and commitments.</li>
+                        <li class="list-group-item"><strong>Speed: </strong> We value time and ensure prompt delivery.</li>
+                        <li class="list-group-item"><strong>Farmer-First:</strong> Farmers’ needs drive our service.</li>
+                    </ul>
+                  </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -19,9 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Share+Tech&display=swap" rel="stylesheet">
-
-  </head>
-  <title>AgriSwift - Buy Direct. Pay Fast. Sell Global.</title>
+    
+  <title>{% block title %}AgriSwift - Buy Direct. Pay Fast. Sell Global.{% endblock %}</title>
 </head>
 <body>
     <!-- navbar -->
@@ -52,16 +51,9 @@
         </div>
     </nav>
 
-    <!-- hero section -->
-    <section class="hero-section">
-      <img src="{% static 'images/main-image.jpg' %}" class="hero-image" alt="Hero Background">
-      <div class="hero-text">
-        <h1 class="display-4 fw-bold"><strong>Agri<span>Swift</span></strong></h1>
-        <p class="lead">Buy Direct. Pay Fast. Sell Global.</p>
-        <a href="#product" class="btn btn-success mt-3">Explore Products</a>
-      </div>
-    </section>
+    {% block content %}
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae consectetur ad corporis delectus, illo ducimus inventore rerum id exercitationem velit fugit! Aliquam sunt porro ad officia perspiciatis hic debitis quod iste ipsa, cupiditate praesentium eligendi, facilis modi atque deleniti molestiae reiciendis nemo dignissimos? Voluptates corrupti rem omnis quos aperiam dolore nihil nostrum non fuga? Veritatis totam labore tempora soluta, aperiam sapiente, repudiandae, incidunt consequuntur neque facilis molestias commodi cum mollitia accusamus doloremque animi consectetur quia delectus culpa quasi ipsam consequatur cumque deleniti necessitatibus! Neque illum nemo et ducimus aperiam. Est voluptate inventore magni necessitatibus quae cumque doloribus numquam quasi sint? Blanditiis unde culpa quaerat, excepturi, expedita asperiores alias repellat non eius consectetur, porro quidem dolorem magni nemo laudantium delectus. Earum optio voluptatibus quam ipsum nesciunt quod corporis, assumenda necessitatibus possimus pariatur veritatis sunt laudantium officiis esse perferendis tempore quia. Voluptatem nisi modi possimus ipsum consequatur? At, laudantium dolore porro rem neque omnis sed fugiat fuga fugit modi, dolores, vero praesentium? Neque quibusdam porro quia modi quae quod harum fugiat voluptatibus rem id. Repudiandae ut, amet unde, nisi debitis id sed impedit ducimus minus suscipit modi repellat fuga reprehenderit quo eveniet error ipsam velit! Veniam ad tenetur amet nesciunt quasi fugit dignissimos vero pariatur sed obcaecati, reprehenderit, rerum deserunt temporibus nulla reiciendis sapiente nobis? Maiores similique sequi illo ad nesciunt consequatur fugit asperiores eveniet fuga deleniti perferendis nisi odio quod esse, iure quae, unde quia nihil ullam quis id consectetur aut suscipit praesentium? Provident natus commodi omnis molestias, ipsum itaque nihil inventore incidunt optio. Inventore excepturi aperiam quo commodi repudiandae, rem molestias beatae vitae blanditiis accusamus vero est, labore, neque architecto dolorem quod. Culpa quas nam, corrupti modi unde omnis quibusdam. Perspiciatis vitae molestias tenetur, cumque dignissimos error! Laborum voluptatem minima soluta excepturi distinctio aut voluptatibus ipsa? Id minus, officia esse assumenda totam in earum accusamus doloribus sed magnam reiciendis ducimus animi iste, nam tempora maiores officiis, nobis error sapiente ratione architecto illum ipsa? Dolor corrupti eveniet, eos delectus incidunt, molestias distinctio fugit laborum facilis in fugiat nam veniam iste, aliquam architecto. Nisi suscipit quidem quis aliquid sint autem minus corrupti dolore asperiores cupiditate incidunt hic libero unde quod obcaecati magni, magnam et provident laudantium aliquam neque adipisci explicabo. Labore dolorem quasi doloremque illo. Magnam eum incidunt dolore provident unde architecto dicta tempore reprehenderit, corporis voluptate nostrum ipsum sed cupiditate quisquam odit hic obcaecati delectus facere veritatis voluptatem dolores! Nemo, esse fugiat nulla officia, necessitatibus atque molestias doloribus consectetur, aliquid dicta cupiditate culpa ad. Labore quas natus, tempore hic commodi reiciendis deleniti odit debitis animi doloribus eaque maxime aliquam nemo totam excepturi explicabo voluptatibus minus officia dolore alias, dolor qui voluptates. Quaerat pariatur fugit provident exercitationem maxime beatae rem molestiae ipsam delectus consequuntur modi, in mollitia est blanditiis unde magni odit deserunt quos minus labore dicta? Voluptatem nihil odio explicabo consequuntur repellendus deleniti illo, quod, minima eius perspiciatis, aliquid animi quisquam dolores eum eveniet nulla qui quaerat optio ad molestias aspernatur. Magni quo perspiciatis sequi quaerat alias esse iure, deserunt nemo.</p>
+    {% endblock %}
+
 </body>
 </html>

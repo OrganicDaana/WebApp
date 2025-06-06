@@ -144,3 +144,32 @@
         padding: 0.5rem 1.2rem;
     }
 }
+
+/* Home Page (Mission and Vision Cards) */
+.home-container .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-container .card-container .card {
+    width: 45% !important;
+    margin: 20px;
+}
+
+.home-container .card-container .card .card-header {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home-container .card-container .card .card-header ul li {
+    font-family: var(--font-body);
+}
+
+@media (max-width: 800px) {
+    .home-container .card-container .card {
+        width: 90% !important;
+    }
+}
