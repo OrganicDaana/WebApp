@@ -1,5 +1,4 @@
 asgiref==3.8.1
-click==8.2.1
 colorama==0.4.6
 Django==5.2.2
 h11==0.16.0
