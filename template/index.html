@@ -1,59 +1,499 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSwift - Farmer First Agricultural Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&family=Share+Tech:wght@400&display=swap" rel="stylesheet">
 
     <!-- custom css -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?{% now 'U' %}">
 
     <!-- custom js -->
     <script src="{% static 'js/utils.js' %}"></script>
-
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bungee+Spice&family=Dancing+Script:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Share+Tech&display=swap" rel="stylesheet">
-    
-  <title>{% block title %}AgriSwift - Buy Direct. Pay Fast. Sell Global.{% endblock %}</title>
 </head>
 <body>
-    <!-- navbar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg" id="mainNavbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/cropped-logo.JPG" alt="Logo" width="65" height="65" class="d-inline-block align-text-top">
-          </a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-                    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Product</a>
-              </li>
-            </ul>
-          </div>
-          
+            <a class="navbar-brand" href="#home">
+                <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/cropped-logo.JPG" alt="AgriSwift Logo" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    {% block content %}
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-section">
+            <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/main-image.jpg" class="hero-image" alt="Hero Background">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1 class="display-4 fw-bold"><strong>Agri<span>Swift</span></strong></h1>
+                <p class="lead">Buy Direct. Pay Fast. Sell Global.</p>
+                <a href="#products" class="btn btn-success mt-3">Explore Products</a>
+            </div>
+        </div>
+    </section>
 
-    {% endblock %}
+    <!-- About Section -->
+    <section class="about-wrapper">
+        <div class="container" id="about">
+            <div class="content-section">
+                <h2>About AgriSwift</h2>
+                <p>AgriSwift is a <span class="highlight-words">farmer-first</span> agricultural platform designed to connect farmers directly to buyers. We ensure <span class="highlight-words">fast payments</span>, <span class="highlight-words">quality assurance</span>, and scalable distribution through our brand.</p>
+            </div>
+            <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/farmer-images.JPG" alt="Farmer image">
+        </div>
+    </section>
 
-</body>
-</html>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Happy Farmers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Fast Payment</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Premium Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Cities Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-wrapper">
+        <div class="container">
+            <div class="card-container">
+                <div class="card border-success mb-3">
+                    <div class="card-header bg-success text-light">Mission</div>
+                    <div class="card-body text-success">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Empower farmers by ensuring instant payment and fair pricing.</li>
+                            <li class="list-group-item">Streamline the supply chain from farm to local businesses and e-commerce platforms.</li>
+                            <li class="list-group-item">Build a trusted agricultural brand focused on quality, speed, and transparency.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card border-info mb-3">
+                    <div class="card-header bg-info text-dark">Vision</div>
+                    <div class="card-body text-info">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">To become India's most trusted agri-brand directly connecting farmers to businesses.</li>
+                            <li class="list-group-item">Revolutionize agriculture commerce with tech-enabled logistics and payments.</li>
+                            <li class="list-group-item">Establish AgriSwift as a symbol of purity, quality, and efficiency in agri-products.</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="card border-danger mb-3">
+                    <div class="card-header bg-danger text-light">Core Values</div>
+                    <div class="card-body text-danger">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Trust: </strong>Building long-lasting relationships with farmers and customers.</li>
+                            <li class="list-group-item"><strong>Integrity: </strong>Transparent pricing and honest practices.</li>
+                            <li class="list-group-item"><strong>Innovation:</strong> Leveraging technology to simplify and scale operations.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card border-warning mb-3">
+                    <div class="card-header bg-warning text-dark">Our Promise</div>
+                    <div class="card-body text-warning">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Instant and fair payment to every farmer.</li>
+                            <li class="list-group-item">Quality assurance in every product sold under AgriSwift.</li>
+                            <li class="list-group-item">Sustainable and farmer-first approach in all operations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose AgriSwift?</h2>
+                <p>Experience the future of agriculture with our innovative platform designed for modern farming needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast Payments</h3>
+                    <p>Get paid instantly upon delivery. No more waiting weeks for your hard-earned money. Our automated payment system ensures farmers receive their payments within 24 hours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every product undergoes rigorous quality checks. Our certified experts ensure that only premium quality produce reaches the market under the AgriSwift brand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Direct Connection</h3>
+                    <p>Connect directly with buyers and eliminate middlemen. Build lasting relationships with verified purchasers and negotiate fair prices for your produce.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Smart Logistics</h3>
+                    <p>Our AI-powered logistics network ensures efficient transportation and delivery. Track your products in real-time from farm to final destination.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Analytics</h3>
+                    <p>Access real-time market data and pricing trends. Make informed decisions about what to grow and when to sell for maximum profitability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Practices</h3>
+                    <p>We promote eco-friendly farming methods and sustainable agriculture practices that benefit both farmers and the environment for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>High-quality, farm-fresh produce processed and packed under the AgriSwift brand.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/paddy-images.jpg" alt="Organic Rice">
+                    </div>
+                    <div class="product-info">
+                        <h4>Rice</h4>
+                        <p>Premium organic rice varieties grown with traditional methods. Our rice is naturally processed without chemicals, retaining essential nutrients and authentic taste. Perfect for daily meals and special occasions.</p>
+                        <div class="product-price">Starting from ₹80/kg</div>
+                    </div>
+                </div>
+        
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/wheat-images.jpg" alt="Organic Wheat">
+                    </div>
+                    <div class="product-info">
+                        <h4>Wheat</h4>
+                        <p>Stone-ground organic wheat flour processed naturally to preserve nutritional value. Sourced from certified organic farms, our wheat ensures wholesome rotis and breads for your family's health.</p>
+                        <div class="product-price">Starting from ₹50/kg</div>
+                    </div>
+                </div>
+        
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/pulse-images.jpg" alt="Organic Pulses">
+                    </div>
+                    <div class="product-info">
+                        <h4>Pulses</h4>
+                        <p>Traditional organic pulses including Moong, Chana, and Masoor dal. Rich in protein and fiber, our pulses are carefully processed to retain maximum nutrition while ensuring authentic taste and quality.</p>
+                        <div class="product-price">Starting from ₹100/kg</div>
+                    </div>
+                </div>
+        
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/mustard-images.jpg" alt="Mustard Seeds">
+                    </div>
+                    <div class="product-info">
+                        <h4>Mustard</h4>
+                        <p>Aromatic organic mustard seeds grown in their native regions. Sun-dried and carefully processed to preserve natural flavors and essential oils. Perfect for tempering and traditional cooking methods.</p>
+                        <div class="product-price">Starting from ₹250/kg</div>
+                    </div>
+                </div>
+        
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/organic-item-images.jpg" alt="Traditional Health Foods">
+                    </div>
+                    <div class="product-info">
+                        <h4>Traditional Health Foods</h4>
+                        <p>Ancient grain powder Sattu and other traditional health foods processed with minimal handling. These nutrient-dense superfoods have been consumed for generations for optimal health and energy.</p>
+                        <div class="product-price">Starting from ₹70/kg</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div style="width: 100%; height: 250px; border-radius: 50%; background: linear-gradient(135deg, #4CAF50, #81C784); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <i class="fas fa-plus" style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <!-- <div style="margin-top: 10px;">
+                            <i class="fas fa-ellipsis-h" style="color: #4CAF50; font-size: 20px;"></i>
+                        </div> -->
+                    </div>
+                    <div class="product-info">
+                        <h4>Many More Products</h4>
+                        <p>Explore our extensive range of organic vegetables, premium fruits, exotic produce, citrus collection, oils, honey, and many other natural products. All sourced from certified organic farms across India.</p>
+                        <div class="product-price">Starting from ₹40/kg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="features-section" style="background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-light) 100%);">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">How AgriSwift Works</h2>
+                <p style="color: rgba(255,255,255,0.8);">Simple steps to connect farmers with buyers efficiently</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 style="color: white;">1. Register & Verify</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Sign up as a farmer or buyer. Complete our simple verification process to ensure platform security and trust.</p>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="feature-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3 style="color: white;">2. List Your Produce</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Upload photos and details of your farm products. Set competitive prices based on our market analytics.</p>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 style="color: white;">3. Connect & Deal</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Buyers browse and connect directly with you. Negotiate terms and finalize deals through our secure platform.</p>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 style="color: white;">4. Smart Delivery</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Our logistics partners handle pickup and delivery. Track shipments in real-time through our mobile app.</p>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <h3 style="color: white;">5. Instant Payment</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Receive payment immediately upon successful delivery. Multiple payment options available for your convenience.</p>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2);">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 style="color: white;">6. Build Reputation</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Earn ratings and reviews. Build your reputation to attract more buyers and command premium prices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="features-section" id="contact" style="background: linear-gradient(135deg, #f8fff8 0%, #e8f8e8 100%);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The passionate professionals behind AgriSwift, dedicated to bringing you the finest organic products and sustainable farming solutions.</p>
+            </div>
+            
+            <div class="team-section">        
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="decorative-element"></div>
+                        <div class="decorative-element"></div>
+                        
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="Team Member 1">
+                        </div>
+                        
+                        <h3 class="team-name">Yuvraj Singh</h3>
+                        <div class="team-designation">Founder & CEO</div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:yuvinitish@gmail.com">yuvinitish@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919876543210">+91 86601 83320</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="decorative-element"></div>
+                        <div class="decorative-element"></div>
+                        
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face" alt="Team Member 2">
+                        </div>
+                        
+                        <h3 class="team-name">Rahul Singh</h3>
+                        <div class="team-designation">Operations Manager</div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:singhrahulofficial03@gmail.com">singhrahulofficial03@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919876543211">+91 89044 45805</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="decorative-element"></div>
+                        <div class="decorative-element"></div>
+                        
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Team Member 3">
+                        </div>
+                        
+                        <h3 class="team-name">Sujeet Kumar</h3>
+                        <div class="team-designation">Tech & Quality Assurance Head</div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:sujeetsmpatel@gmail.com">sujeetsmpatel@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919876543212">+91 78701 07176</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Team Member 4 -->
+                    <div class="team-card">
+                        <div class="decorative-element"></div>
+                        <div class="decorative-element"></div>
+                        
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Team Member 4">
+                        </div>
+                        
+                        <h3 class="team-name">Saurabh Singh</h3>
+                        <div class="team-designation">Marketing Director</div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:saurabhsinghqw@gmail.com">saurabhsinghqw@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919876543213">+91 86518 13949</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--forest-dark); color: white; padding: 50px 0 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 style="color: var(--color-navbar); margin-bottom: 20px;">AgriSwift</h5>
+                    <p>Empowering farmers through technology and connecting them directly to buyers for a sustainable agricultural future.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" style="color: var(--color-navbar); font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--color-navbar); font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--color-navbar); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--color-navbar); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 style="color: var(--color-navbar); margin-bottom: 20px;">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" style="color: rgba(255,255,255,0.8); text-decoration: none;">Home</a></li>
+                        <li><a href="#about" style="color: rgba(255,255,255,0.8); text-decoration: none;">About</a></li>
+                        <li><a href="#features" style="color: rgba(255,255,255,0.8); text-decoration: none;">Features</a></li>
+                        <li><a href="#products" style="color: rgba(255,255,255,0.8); text-decoration: none;">Products</a></li>
+                        <li><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 style="color: var(--color-navbar); margin-bottom: 20px;">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Farmer Registration</a></li>
+                        <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Buyer Connect</a></li>
+                        <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Quality Assurance</a></li>
+                        <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Logistics Support</a></li>
+                        <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Payment Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 style="color: var(--color-navbar); margin-bottom: 20px;">Newsletter</h6>
+                    <p style="color: rgba(255,255,255,0.8);">Subscribe to get latest updates about agriculture and our platform.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn" style="background: var(--color-navbar); color: white;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0 20px;">
+            <div class="text-center">
+                <p style="color: rgba(255,255,255,0.6); margin: 0;">&copy; 2025 AgriSwift. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
