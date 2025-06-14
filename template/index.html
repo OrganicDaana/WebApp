@@ -11,17 +11,20 @@
 
     <!-- custom css -->
     <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}?{% now 'U' %}"> -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?{% now 'U' %}">
 
     <!-- custom js -->
     <script src="{% static 'js/utils.js' %}"></script>
+
+    <!-- w3 logos -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg" id="mainNavbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home">
-                <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/cropped-logo.JPG" alt="AgriSwift Logo" width="50" height="50">
+                <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/logo.jpg" alt="AgriSwift Logo" width="50" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -55,7 +58,9 @@
             <div class="hero-overlay"></div>
             <div class="hero-text">
                 <h1 class="display-4 fw-bold"><strong>Agri<span>Swift</span></strong></h1>
-                <p class="lead">Buy Direct. Pay Fast. Sell Global.</p>
+                <p class="lead">
+                    <i class='fas fa-leaf' style='font-size:35px;color:rgb(74, 178, 74)'></i> Farm <i class='fas fa-truck-moving' style='font-size:30px;color:rgb(74, 178, 74)'></i> <span>.....</span> Home <i class='fas fa-home' style='font-size:30px;color:rgb(74, 178, 74)'></i>
+                </p>
                 <a href="#products" class="btn btn-success mt-3">Explore Products</a>
             </div>
         </div>
@@ -66,9 +71,36 @@
         <div class="container" id="about">
             <div class="content-section">
                 <h2>About AgriSwift</h2>
-                <p>AgriSwift is a <span class="highlight-words">farmer-first</span> agricultural platform designed to connect farmers directly to buyers. We ensure <span class="highlight-words">fast payments</span>, <span class="highlight-words">quality assurance</span>, and scalable distribution through our brand.</p>
+                <p>
+                
+                At AgriSwift, we believe in bringing the farm closer to your home. We <span class="highlight-words">source fresh</span>, <span class="highlight-words">high-quality</span> agricultural produce directly from trusted farmers, <span class="highlight-words">cutting out middlemen to ensure better prices</span> for farmers and <span class="highlight-words">fresher products</span> for you. Through our easy-to-use e-commerce platform, you can conveniently shop for farm-fresh grains, and other essentials product, delivered straight to your doorstep.
+                <br>
+                We’re committed to empowering local farmers, reducing supply chain inefficiencies, and offering customers an honest, transparent, and affordable farm-to-table experience.
+            
+                </p>
             </div>
-            <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/farmer-images.JPG" alt="Farmer image">
+            <div class="img-box d-flex">
+                <div>
+                    <div class="img-1">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/about-img-1.jpg"
+                            alt="waiting for image response...">
+                    </div>
+                    <div class="img-2">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/about-img-2.jpg"
+                            alt="waiting for image response...">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-3">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/about-img-3.jpg"
+                            alt="waiting for image response...">
+                    </div>
+                    <div class="img-4">
+                        <img src="https://pub-a39da84d48d0420ab80bdde72c59fa09.r2.dev/about-img-4.jpg"
+                            alt="waiting for image response...">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -77,19 +109,19 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">5000+</div>
+                    <div class="stat-number">500+</div>
                     <div class="stat-label">Happy Farmers</div>
                 </div>
-                <div class="stat-item">
+                <!-- <div class="stat-item">
                     <div class="stat-number">24h</div>
                     <div class="stat-label">Fast Payment</div>
-                </div>
+                </div> -->
                 <div class="stat-item">
-                    <div class="stat-number">100+</div>
+                    <div class="stat-number">10+</div>
                     <div class="stat-label">Premium Products</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">50+</div>
+                    <div class="stat-number">2+</div>
                     <div class="stat-label">Cities Served</div>
                 </div>
             </div>
@@ -104,9 +136,9 @@
                     <div class="card-header bg-success text-light">Mission</div>
                     <div class="card-body text-success">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Empower farmers by ensuring instant payment and fair pricing.</li>
                             <li class="list-group-item">Streamline the supply chain from farm to local businesses and e-commerce platforms.</li>
                             <li class="list-group-item">Build a trusted agricultural brand focused on quality, speed, and transparency.</li>
+                            <li class="list-group-item">Empower farmers by ensuring instant payment and fair pricing.</li>
                         </ul>
                     </div>
                 </div>
@@ -114,9 +146,9 @@
                     <div class="card-header bg-info text-dark">Vision</div>
                     <div class="card-body text-info">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">To become India's most trusted agri-brand directly connecting farmers to businesses.</li>
-                            <li class="list-group-item">Revolutionize agriculture commerce with tech-enabled logistics and payments.</li>
-                            <li class="list-group-item">Establish AgriSwift as a symbol of purity, quality, and efficiency in agri-products.</li>
+                            <li class="list-group-item">To be India’s most trusted farm-to-home brand</li>
+                            <li class="list-group-item">Transforming the agricultural supply chain by empowering farmers</li>
+                            <li class="list-group-item">Reducing grains wastage, and delivering farm-fresh produce to every doorstep</li>
                         </ul>
                     </div>
                 </div> 
@@ -125,7 +157,7 @@
                     <div class="card-body text-danger">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><strong>Trust: </strong>Building long-lasting relationships with farmers and customers.</li>
-                            <li class="list-group-item"><strong>Integrity: </strong>Transparent pricing and honest practices.</li>
+                            <li class="list-group-item"><strong>Freshness & Quality: </strong>Committed to delivering only fresh, authentic, and naturally grown produce.</li>
                             <li class="list-group-item"><strong>Innovation:</strong> Leveraging technology to simplify and scale operations.</li>
                         </ul>
                     </div>
@@ -134,9 +166,9 @@
                     <div class="card-header bg-warning text-dark">Our Promise</div>
                     <div class="card-body text-warning">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Instant and fair payment to every farmer.</li>
-                            <li class="list-group-item">Quality assurance in every product sold under AgriSwift.</li>
-                            <li class="list-group-item">Sustainable and farmer-first approach in all operations.</li>
+                            <li class="list-group-item">Deliver fresh, farm-picked produce directly to your doorstep.</li>
+                            <li class="list-group-item">Ensure fair and better prices for farmers, cutting out middlemen.</li>
+                            <li class="list-group-item">Maintain transparency and trust in every transaction.</li>
                         </ul>
                     </div>
                 </div>
@@ -149,15 +181,15 @@
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose AgriSwift?</h2>
-                <p>Experience the future of agriculture with our innovative platform designed for modern farming needs</p>
+                <p>Fresh from farms, quality you can trust, impact you can feel.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Lightning Fast Payments</h3>
-                    <p>Get paid instantly upon delivery. No more waiting weeks for your hard-earned money. Our automated payment system ensures farmers receive their payments within 24 hours.</p>
+                    <h3>Fresh & Authentic</h3>
+                    <p>Carefully sourced, naturally grown produce delivered fresh.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -170,22 +202,22 @@
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Direct Connection</h3>
-                    <p>Connect directly with buyers and eliminate middlemen. Build lasting relationships with verified purchasers and negotiate fair prices for your produce.</p>
+                    <h3>Direct from Farms</h3>
+                    <p>No middlemen — better earnings for farmers, better prices for you.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h3>Smart Logistics</h3>
-                    <p>Our AI-powered logistics network ensures efficient transportation and delivery. Track your products in real-time from farm to final destination.</p>
+                    <h3>Convenient Online Shopping</h3>
+                    <p>Browse, order, and receive farm-fresh products from the comfort of your home.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Market Analytics</h3>
-                    <p>Access real-time market data and pricing trends. Make informed decisions about what to grow and when to sell for maximum profitability.</p>
+                    <h3>Empowering Rural Communities</h3>
+                    <p>Every purchase helps support and uplift local farming families.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -281,7 +313,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="features-section" style="background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-light) 100%);">
+    <!-- <section class="features-section" style="background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-light) 100%);">
         <div class="container">
             <div class="section-title">
                 <h2 style="color: white;">How AgriSwift Works</h2>
@@ -332,7 +364,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section class="features-section" id="contact" style="background: linear-gradient(135deg, #f8fff8 0%, #e8f8e8 100%);">
@@ -354,17 +386,17 @@
                         </div>
                         
                         <h3 class="team-name">Yuvraj Singh</h3>
-                        <div class="team-designation">Founder & CEO</div>
+                        <div class="team-designation">Founder & CFO</div>
                         
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <a href="mailto:yuvinitish@gmail.com">yuvinitish@gmail.com</a>
                             </div>
-                            <div class="contact-item">
+                            <!-- <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <a href="tel:+919876543210">+91 86601 83320</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
         
@@ -378,17 +410,17 @@
                         </div>
                         
                         <h3 class="team-name">Rahul Singh</h3>
-                        <div class="team-designation">Operations Manager</div>
+                        <div class="team-designation">Founder & CEO</div>
                         
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <a href="mailto:singhrahulofficial03@gmail.com">singhrahulofficial03@gmail.com</a>
                             </div>
-                            <div class="contact-item">
+                            <!-- <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <a href="tel:+919876543211">+91 89044 45805</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
         
@@ -402,17 +434,17 @@
                         </div>
                         
                         <h3 class="team-name">Sujeet Kumar</h3>
-                        <div class="team-designation">Tech & Quality Assurance Head</div>
+                        <div class="team-designation">Founder & CTO</div>
                         
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <a href="mailto:sujeetsmpatel@gmail.com">sujeetsmpatel@gmail.com</a>
                             </div>
-                            <div class="contact-item">
+                            <!-- <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <a href="tel:+919876543212">+91 78701 07176</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
         
@@ -426,17 +458,17 @@
                         </div>
                         
                         <h3 class="team-name">Saurabh Singh</h3>
-                        <div class="team-designation">Marketing Director</div>
+                        <div class="team-designation">Founder & COO</div>
                         
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <a href="mailto:saurabhsinghqw@gmail.com">saurabhsinghqw@gmail.com</a>
                             </div>
-                            <div class="contact-item">
+                            <!-- <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <a href="tel:+919876543213">+91 86518 13949</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -447,10 +479,10 @@
     <!-- Footer -->
     <footer style="background: var(--forest-dark); color: white; padding: 50px 0 20px;">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="col-lg-4 mb-4">
                     <h5 style="color: var(--color-navbar); margin-bottom: 20px;">AgriSwift</h5>
-                    <p>Empowering farmers through technology and connecting them directly to buyers for a sustainable agricultural future.</p>
+                    <p>Fresh from farms, quality you can trust, impact you can feel.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#" style="color: var(--color-navbar); font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
                         <a href="#" style="color: var(--color-navbar); font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
@@ -468,7 +500,7 @@
                         <li><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <!-- <div class="col-lg-3 col-md-6 mb-4">
                     <h6 style="color: var(--color-navbar); margin-bottom: 20px;">Services</h6>
                     <ul class="list-unstyled">
                         <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Farmer Registration</a></li>
@@ -477,7 +509,7 @@
                         <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Logistics Support</a></li>
                         <li><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none;">Payment Solutions</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="col-lg-3 mb-4">
                     <h6 style="color: var(--color-navbar); margin-bottom: 20px;">Newsletter</h6>
                     <p style="color: rgba(255,255,255,0.8);">Subscribe to get latest updates about agriculture and our platform.</p>
@@ -489,7 +521,7 @@
             </div>
             <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0 20px;">
             <div class="text-center">
-                <p style="color: rgba(255,255,255,0.6); margin: 0;">&copy; 2025 AgriSwift. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p style="color: rgba(255,255,255,0.6); margin: 0;">&copy; 2025 AgriSwift. All rights reserved.</p>
             </div>
         </div>
     </footer>
