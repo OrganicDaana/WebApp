@@ -57,13 +57,15 @@ body {
 }
 
 .navbar .navbar-brand img {
-    border-radius: 50%;
     transition: transform 0.3s ease;
+    height: 90px;
+    width: 160px;
+    background: transparent;
 }
 
-.navbar .navbar-brand img:hover {
+/* .navbar .navbar-brand img:hover {
     transform: scale(1.1);
-}
+} */
 
 .navbar .navbar-nav .nav-item {
     margin: 0 10px;
