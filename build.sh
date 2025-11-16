@@ -15,7 +15,7 @@ python manage.py collectstatic --noinput --clear
 
 # 4) generate static HTML files into the 'dist' folder
 # django-distill: output directory passed as argument
-python manage.py distill-local dist
+python manage.py distill-local dist --force
 
 # 5) Deactivate (optional)
 deactivate || true
