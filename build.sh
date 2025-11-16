@@ -10,7 +10,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 # 3) collect static files into dist/static
-export DJANGO_SETTINGS_MODULE=yourproject.settings
+export DJANGO_SETTINGS_MODULE=AgriSwiftWebApp.settings
 python manage.py collectstatic --noinput --clear
 
 # 4) generate static HTML files into the 'dist' folder
@@ -20,4 +20,4 @@ python manage.py distill-local dist
 # 5) Deactivate (optional)
 deactivate || true
 
-echo "Build complete — 'dist/' is ready for deploy"
+echo "Build complete"
