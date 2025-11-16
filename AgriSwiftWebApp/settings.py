@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v(0sppz-iw9s_nb94)b%i05&)f5a%uth&k_*^+lhvuatl1ovj!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["organicdaana.com", "webapp-78g.pages.dev"]
+ALLOWED_HOSTS = ["organicdaana.com", "webapp-78g.pages.dev", "127.0.0.1:8000"]
 
 
 # Application definition
@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BaseApp',
-    'django_distill',  # ← REQUIRED!
+    'django_distill',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # whitenoise
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,6 +129,8 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 WHITENOISE_USE_FINDERS = True
 WHITENOISE_AUTOREFRESH = True
