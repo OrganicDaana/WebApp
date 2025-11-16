@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BaseApp',
+    'django_distill',  # ← REQUIRED!
 ]
 
 MIDDLEWARE = [
