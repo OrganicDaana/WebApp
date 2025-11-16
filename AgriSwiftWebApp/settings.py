@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v(0sppz-iw9s_nb94)b%i05&)f5a%uth&k_*^+lhvuatl1ovj!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["organicdaana.com", "webapp-78g.pages.dev"]
 
 
 # Application definition
